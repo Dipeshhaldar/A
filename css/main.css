@@ -691,8 +691,22 @@ button[class ^=navbar]:hover {
     background-color: var(--light-gray);
 }
 
+.posts.section-head h2 {
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
 .posts-inner {
-    margin-top: 6rem;
+    margin-top: 5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 6rem;
 }
 
 .post-item {
@@ -728,6 +742,16 @@ button[class ^=navbar]:hover {
 
 .post-item .info .text {
     padding-bottom: 0;
+}
+
+.post-item img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.post-item:hover img {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
 }
 
 /* contact section */
@@ -1198,6 +1222,7 @@ button[class ^=navbar]:hover {
 
     .posts-inner {
         grid-template-columns: repeat(3, 1fr);
+
     }
 
     .post-item {
