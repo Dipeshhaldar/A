@@ -31,3 +31,16 @@ window.addEventListener('resize', () => {
         document.body.classList.remove('resize-animation-stopper');
     }, 400);
 });
+
+function slideInOnScroll(entries) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("slide-in-active");
+        }
+    });
+}
+
+const slideInObserver = new IntersectionObserver(slideInOnScroll, { threshold: 0.2 });
+const slideInSection = document.querySelector(".slide-in");
+
+slideInObserver.observe(slideInSection);

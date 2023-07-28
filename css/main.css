@@ -1257,3 +1257,31 @@ button[class ^=navbar]:hover {
     -o-transition: none !important;
     transition: none !important;
 }
+
+/* CSS for the fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1.5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    to {
+      opacity: 1;
+    }
+  }
+
+/* CSS for the initial state of the slide-in animation */
+.slide-in {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  
+  /* CSS for the animated state of the slide-in effect */
+  .slide-in.slide-in-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1s, transform 1s;
+  }
+  
+  
+  
